@@ -44,7 +44,7 @@ int main(void) {
 	if (count == 9) {
 		for (int row = 0; row < 3; row++) {
 			for (int col = 0; col < 3; col++) {
-				cout << '0' << ' ';
+				cout << grid[row][col] << ' ';
 			}
 			cout << endl;
 		}
@@ -69,6 +69,10 @@ int main(void) {
 		}
 	}
 
+	if (count == 9) {
+		printGrid(grid);
+		return 0;
+	}
 	// case 0 part 2: a col has two int
 	for (int col = 0; col < 3; col++) {
 		if (grid[3][col] == 2) {
